@@ -1,273 +1,403 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Anoop Shekhar | Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <style>
-    body {
-      background: #f8fafc;
-      min-height: 100vh;
-    }
-    .profile-img {
-      width: 250px;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid #3b82f6;
-      box-shadow: 0 4px 24px rgba(59,130,246,0.15);
-      transition: transform 0.3s;
-    }
-    .profile-img:hover {
-      transform: scale(1.07) rotate(-2deg);
-      box-shadow: 0 8px 32px rgba(59,130,246,0.25);
-    }
-    .section-title {
-      font-weight: 700;
-      color: #3b82f6;
-      letter-spacing: 1px;
-      margin-bottom: 1rem;
-      position: relative;
-      display: inline-block;
-      animation: fadeInDown 1s;
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px);}
-      to { opacity: 1; transform: translateY(0);}
-    }
-    .card {
-      border: none;
-      border-radius: 18px;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.10);
-      background: #f8fafc;
-      transition: none;
-    }
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anoop Shekhar | Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: #f8fafc;
+        min-height: 100vh;
+      }
+      .profile-img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 50%;
+        border: 5px solid #3b82f6;
+        box-shadow: 0 4px 24px rgba(59, 130, 246, 0.15);
+        transition: transform 0.3s;
+      }
+      .profile-img:hover {
+        transform: scale(1.07) rotate(-2deg);
+        box-shadow: 0 8px 32px rgba(59, 130, 246, 0.25);
+      }
+      .section-title {
+        font-weight: 700;
+        color: #3b82f6;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+        animation: fadeInDown 1s;
+      }
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .card {
+        border: none;
+        border-radius: 18px;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+        background: #f8fafc;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      }
 
-    .form-control:focus {
-      border-color: #3b82f6;
-      box-shadow: 0 0 0 0.2rem rgba(59,130,246,.15);
-    }
-    .btn-primary, .btn-primary:active, .btn-primary:focus, .btn-primary:visited {
-      background: #2563eb !important;
-      border: none !important;
-      color: #fff !important;
-      font-weight: 600;
-      transition: none;
-    }
-    /* Remove button hover effect */
-    /* .btn-primary:hover { ... } */
+      .form-control:focus {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.15);
+      }
+      .btn-primary,
+      .btn-primary:active,
+      .btn-primary:focus,
+      .btn-primary:visited {
+        background: #2563eb !important;
+        border: none !important;
+        color: #fff !important;
+        font-weight: 600;
+        transition: background 0.3s ease;
+      }
+      /* Remove button hover effect */
+      /* .btn-primary:hover { ... } */
 
-    .btn-primary:hover, .btn-primary:active {
-      background: #1d4ed8 !important;
-      color: #fff !important;
-    }
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 1.2s forwards;
-    }
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
-  </style>
-</head>
-<body>
-  <!-- Header -->
-  <header class="container py-5 text-center fade-in" style="animation-delay:0.2s;">
-
-    <h1 class="fw-bold">Anoop Shekhar</h1>
-    <p class="lead">Aspiring Web Developer | Tech Enthusiast | Navi Mumbai, India</p>
-    <div>
-      <a href="https://github.com/anoops10" target="_blank" class="me-3 text-decoration-none text-dark"><i class="bi bi-github"></i></a>
-      <a href="https://www.linkedin.com/in/anoop-shekhar-56849418a/" target="_blank" class="text-decoration-none text-primary"><i class="bi bi-linkedin"></i></a>
-    </div>
-  </header>
-
-  <!-- Personal Details & Education -->
-  <section class="container mb-5 fade-in" style="animation-delay:0.4s;">
-    <div class="row g-4">
-      <div class="col-md-6">
-        <h2 class="section-title">Personal Details</h2>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Full Name: <strong>Anoop Shekhar</strong></li>
-          <!-- <li class="list-group-item">DOB: <strong>01 Jan 2000</strong></li> -->
-          <li class="list-group-item">Email: <strong>anoopshekhar85@gmail.com</strong></li>
-          <li class="list-group-item">Phone: <strong>7066049903</strong></li>
-          <li class="list-group-item">Location: <strong>Navi Mumbai, India</strong></li>
-        </ul>
+      .btn-primary:hover,
+      .btn-primary:active {
+        background: #1d4ed8 !important;
+        color: #fff !important;
+      }
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 1.2s forwards;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+      .badge {
+        padding: 0.6em 1em;
+        border-radius: 50rem;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header
+      class="container py-5 text-center fade-in"
+      style="animation-delay: 0.2s"
+    >
+      <!-- <img 
+        src="https://ui-avatars.com/api/?name=Anoop+Shekhar&background=3b82f6&color=fff&size=250" 
+        alt="Anoop Shekhar" 
+        class="profile-img mb-4"
+      > -->
+      <h1 class="fw-bold">Anoop Shekhar</h1>
+      <p class="lead">
+        Aspiring Web Developer | Tech Enthusiast | Navi Mumbai, India
+      </p>
+      <div>
+        <a
+          href="https://github.com/anoops10"
+          target="_blank"
+          class="me-3 text-decoration-none text-dark"
+          ><i class="bi bi-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/anoop-shekhar-56849418a/"
+          target="_blank"
+          class="text-decoration-none text-primary"
+          ><i class="bi bi-linkedin"></i
+        ></a>
       </div>
-      <div class="col-md-6">
-        <h2 class="section-title">Education</h2>
-        <div class="card p-3 mb-2">
-          <h5 class="mb-1">Bachelor of Engineering in Computer Science</h5>
-          <p class="mb-0">Shhivaji University</p>
+    </header>
+
+    <!-- Personal Details & Education -->
+    <section class="container mb-5 fade-in" style="animation-delay: 0.4s">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h2 class="section-title">Personal Details</h2>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              Full Name: <strong>Anoop Shekhar</strong>
+            </li>
+            <!-- <li class="list-group-item">DOB: <strong>01 Jan 2000</strong></li> -->
+            <li class="list-group-item">
+              Email: <strong>anoopshekhar85@gmail.com</strong>
+            </li>
+            <li class="list-group-item">Phone: <strong>7066049903</strong></li>
+            <li class="list-group-item">
+              Location: <strong>Navi Mumbai, India</strong>
+            </li>
+          </ul>
         </div>
-        <div class="card p-3">
-          <h5 class="mb-1">High School</h5>
-          <p class="mb-0"> Kendriya vidyalaya</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Technical Skills -->
-  <section class="container mb-5 fade-in" style="animation-delay:0.6s;">
-    <h2 class="section-title">Technical Skills</h2>
-    <div class="card p-3 mb-3">
-      <div class="d-flex flex-wrap gap-2 align-items-center">
-        <span class="badge bg-primary">HTML</span>
-        <span class="badge bg-secondary">CSS</span>
-        <span class="badge bg-info text-dark">Bootstrap</span>
-        <span class="badge bg-warning text-dark">JavaScript</span>
-        <span class="badge bg-success">React</span>
-        <span class="badge bg-dark">MySql</span>
-        <span class="badge bg-danger">Java</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="container mb-5 fade-in" style="animation-delay:0.6s;">
-    <h2 class="section-title">Projects</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Jimmy's Castle</h5>
-            <p class="card-text">Jimmy’s Castle is a responsive web application that showcases an e-commerce style pet supplies store where users can explore products designed to meet their pets’ needs, such as items for dogs, cats, and birds. The site features a clean layout with navigation for browsing categories, and includes user authentication pages like Login and Register to set up a more interactive user experience. The project demonstrates skills in building a user-friendly front end, implementing modern UI elements, and deploying a static site using Github’s hosting platform. It reflects a practical application of web development concepts such as layout design, routing, forms, and category filtering</p>
-            <a href="https://anoops10.github.io/jimmycastle/index.html" class="btn btn-primary btn-sm">View Project</a>
+        <div class="col-md-6">
+          <h2 class="section-title">Education</h2>
+          <div class="card p-3 mb-3">
+            <h5 class="mb-1">Bachelor of Engineering in Computer Science</h5>
+            <p class="mb-0 text-muted">Shivaji University</p>
+          </div>
+          <div class="card p-3">
+            <h5 class="mb-1">High School</h5>
+            <p class="mb-0">Kendriya vidyalaya</p>
           </div>
         </div>
       </div>
-      <!-- <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Pet Shop Website</h5>
-            <p class="card-text">A simple e-commerce web app with product listing and cart features.</p>
-            <a href="D:\it vedant\Projects\project1\index.html" class="btn btn-primary btn-sm">View Project</a>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="container mb-5 fade-in" style="animation-delay: 0.6s">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="card p-3 mb-3">
+        <div class="d-flex flex-wrap gap-2 align-items-center">
+          <span class="badge bg-primary">HTML</span>
+          <span class="badge bg-secondary">CSS</span>
+          <span class="badge bg-info text-dark">Bootstrap</span>
+          <span class="badge bg-warning text-dark">JavaScript</span>
+          <span class="badge bg-success">React</span>
+          <span class="badge bg-dark">MySql</span>
+          <span class="badge bg-danger">Java</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="container mb-5 fade-in" style="animation-delay: 0.6s">
+      <h2 class="section-title">Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Jimmy's Castle</h5>
+              <p class="card-text">
+                Jimmy’s Castle is a responsive web application that showcases an
+                e-commerce style pet supplies store where users can explore
+                products designed to meet their pets’ needs, such as items for
+                dogs, cats, and birds. The site features a clean layout with
+                navigation for browsing categories, and includes user
+                authentication pages like Login and Register to set up a more
+                interactive user experience. The project demonstrates skills in
+                building a user-friendly front end, implementing modern UI
+                elements, and deploying a static site using Github’s hosting
+                platform. It reflects a practical application of web development
+                concepts such as layout design, routing, forms, and category
+                filtering
+              </p>
+              <a
+                href="https://anoops10.github.io/jimmycastle/index.html"
+                class="btn btn-primary btn-sm"
+                >View Project</a
+              >
+            </div>
           </div>
         </div>
-      </div> -->
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Kitchen's Delight</h5>
-            <p class="card-text"> Kitchen’s Delight – Food Ordering Web App
 
-Kitchen’s Delight is a responsive front-end food ordering web application inspired by an Indian restaurant experience. The app allows users to browse vegetarian and non-vegetarian dishes, view prices, and add items to a cart with a dynamic cart counter.
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Kitchen's Delight</h5>
+              <p class="card-text">
+                Kitchen’s Delight – Food Ordering Web App Kitchen’s Delight is a
+                responsive front-end food ordering web application inspired by
+                an Indian restaurant experience. The app allows users to browse
+                vegetarian and non-vegetarian dishes, view prices, and add items
+                to a cart with a dynamic cart counter.
+              </p>
+              
+              <ul class="list-unstyled small mt-3">
+                <li class="mb-1">🔹 Category-based filtering (Veg / Non-Veg)</li>
+                <li class="mb-1">🔹 Dynamic food listing rendered using JavaScript</li>
+                <li class="mb-1">🔹 Add-to-cart functionality with live cart badge update</li>
+                <li class="mb-1">🔹 Smooth scroll navigation & Clean UI</li>
+              </ul>
+              <p class="small text-muted fw-bold">
+                Tech Stack: HTML • CSS • JavaScript • GITHUB
+              </p>
+              <a
+                href="https://anoops10.github.io/kitchensdelight/"
+                class="btn btn-primary btn-sm"
+                >View Project</a
+              >
+            </div>
+          </div>
+        </div>
 
-<div>🔹 Key Features:
-
-Category-based filtering (Veg / Non-Veg)
-
-Dynamic food listing rendered using JavaScript
-
-Add-to-cart functionality with live cart badge update
-
-Smooth scroll navigation to the “About Us” section
-
-Clean UI with animations and fully responsive layout
-</div>
-<div>
-🔹 Tech Stack:
-HTML • CSS • JavaScript • GITHUB (Deployment)
-</div>
-            <a href="https://anoops10.github.io/kitchensdelight/" class="btn btn-primary btn-sm">View Project</a>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Groot's Fitness Club(currently working)</h5>
+              <div class="card-text small">
+                <ul class="ps-3">
+                  <li class="mb-2">
+                    <strong>Frontend:</strong> Built a responsive single-page application (SPA) using React, implementing React Router for persistent layouts and state management hooks (useState, useEffect) for dynamic data rendering. Integrated specialized UI components to optimize the user registration flow.
+                  </li>
+                  <li class="mb-2">
+                    <strong>Backend:</strong> Developed a robust REST API with Spring Boot to manage core gym operations.
+                  </li>
+                  <li class="mb-2">
+                    <strong>Data:</strong> Engineered complex, bidirectional entity relationships (Users, Trainers, Memberships, Payments) using JPA, ensuring clean API responses via optimized JSON serialization techniques.
+                  </li>
+                  <li class="mb-2">
+                    <strong>Security:</strong> Implementing stateless user authentication and route protection using JWT (JSON Web Tokens).
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Certification Section
+    <!-- Certification Section
   <section class="container mb-5 fade-in" style="animation-delay:0.7s;">
     <h2 class="section-title">Certifications</h2>
     
   </section> -->
 
-  <!-- Hobbies -->
-  <section class="container mb-5 fade-in" style="animation-delay:0.8s;">
-    <h2 class="section-title">Hobbies</h2>
-    <div class="row g-4">
-      <div class="col-md-3 col-6">
-        <div class="card text-center py-4">
-          <i class="bi bi-music-note-beamed fs-1 text-primary"></i>
-          <div class="card-body">
-            <h6 class="card-title">Trekking</h6>
+    <!-- Hobbies -->
+    <section class="container mb-5 fade-in" style="animation-delay: 0.8s">
+      <h2 class="section-title">Hobbies</h2>
+      <div class="row g-4">
+        <div class="col-md-3 col-6">
+          <div class="card text-center py-4">
+            <i class="bi bi-signpost-2 fs-1 text-primary"></i>
+            <div class="card-body">
+              <h6 class="card-title">Trekking</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card text-center py-4">
+            <i class="bi bi-dribbble fs-1 text-success"></i>
+            <div class="card-body">
+              <h6 class="card-title">Football</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card text-center py-4">
+            <i class="bi bi-camera fs-1 text-warning"></i>
+            <div class="card-body">
+              <h6 class="card-title">Photography</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card text-center py-4">
+            <i class="bi bi-car-front fs-1 text-danger"></i>
+            <div class="card-body">
+              <h6 class="card-title">Road Trips</h6>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-3 col-6">
-        <div class="card text-center py-4">
-          <i class="bi bi-controller fs-1 text-success"></i>
-          <div class="card-body">
-            <h6 class="card-title">Football</h6>
+    </section>
+
+    <!-- Contact Section -->
+    <!-- <section class="container mb-5 fade-in" style="animation-delay: 1.0s">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card p-4">
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name">
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                <div class="invalid-feedback">Please enter a valid email.</div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Your message..."></textarea>
+                <div class="invalid-feedback">Please enter a message.</div>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Send Message</button>
+            </form>
+            <div id="formSuccess" class="alert alert-success d-none text-center mt-3">
+              Thank you! Your message has been sent.
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-3 col-6">
-        <div class="card text-center py-4">
-          <i class="bi bi-camera fs-1 text-warning"></i>
-          <div class="card-body">
-            <h6 class="card-title">Photography</h6>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-6">
-        <div class="card text-center py-4">
-          <i class="bi bi-book fs-1 text-danger"></i>
-          <div class="card-body">
-            <h6 class="card-title">Road Trips</h6>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section> -->
 
+    <!-- Footer -->
+    <footer class="bg-white text-center py-4 mt-5 border-top">
+      <p class="mb-0 text-muted small">&copy; 2024 Anoop Shekhar. All rights reserved.</p>
+    </footer>
 
-  <script>
-    // Animate fade-in sections
-    document.querySelectorAll('.fade-in').forEach((el, i) => {
-      el.style.animationDelay = (0.2 + i * 0.2) + 's';
-    });
+    <script>
+      // Animate fade-in sections
+      document.querySelectorAll(".fade-in").forEach((el, i) => {
+        el.style.animationDelay = 0.2 + i * 0.2 + "s";
+      });
 
-    // Contact form validation and success message
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      let valid = true;
-      const name = document.getElementById('name');
-      const email = document.getElementById('email');
-      const message = document.getElementById('message');
-      const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+      // Contact form validation and success message
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          let valid = true;
+          const name = document.getElementById("name");
+          const email = document.getElementById("email");
+          const message = document.getElementById("message");
+          const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
-      if (!name.value.trim()) {
-        name.classList.add('is-invalid');
-        valid = false;
-      } else {
-        name.classList.remove('is-invalid');
-      }
-      if (!email.value.trim() || !emailPattern.test(email.value)) {
-        email.classList.add('is-invalid');
-        valid = false;
-      } else {
-        email.classList.remove('is-invalid');
-      }
-      if (!message.value.trim()) {
-        message.classList.add('is-invalid');
-        valid = false;
-      } else {
-        message.classList.remove('is-invalid');
-      }
-      if (!valid) {
-        e.preventDefault();
-      } else {
-        // Show success message after submission (for demo, remove if using Formspree)
-        e.preventDefault();
-        document.getElementById('contactForm').classList.add('d-none');
-        document.getElementById('formSuccess').classList.remove('d-none');
-      }
-    });
-  </script>
-</body>
+          if (!name.value.trim()) {
+            name.classList.add("is-invalid");
+            valid = false;
+          } else {
+            name.classList.remove("is-invalid");
+          }
+          if (!email.value.trim() || !emailPattern.test(email.value)) {
+            email.classList.add("is-invalid");
+            valid = false;
+          } else {
+            email.classList.remove("is-invalid");
+          }
+          if (!message.value.trim()) {
+            message.classList.add("is-invalid");
+            valid = false;
+          } else {
+            message.classList.remove("is-invalid");
+          }
+          if (!valid) {
+            e.preventDefault();
+          } else {
+            // Show success message after submission (for demo, remove if using Formspree)
+            e.preventDefault();
+            document.getElementById("contactForm").classList.add("d-none");
+            document.getElementById("formSuccess").classList.remove("d-none");
+          }
+        });
+    </script>
+  </body>
 </html>
