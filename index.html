@@ -119,18 +119,24 @@
       > -->
       <h1 class="fw-bold">Anoop Shekhar</h1>
       <p class="lead">
-        Aspiring Web Developer | Tech Enthusiast | Navi Mumbai, India
+        Full-Stack Web Developer | React, Spring Boot, REST APIs | Navi Mumbai, India
       </p>
+      <div class="d-flex justify-content-center gap-2 mb-3">
+        <a href="#projects" class="btn btn-primary btn-sm px-3">View Projects</a>
+        <a href="mailto:anoopshekhar85@gmail.com" class="btn btn-outline-primary btn-sm px-3">Email Me</a>
+      </div>
       <div>
         <a
           href="https://github.com/anoops10"
           target="_blank"
+          rel="noopener noreferrer"
           class="me-3 text-decoration-none text-dark"
           ><i class="bi bi-github"></i
         ></a>
         <a
           href="https://www.linkedin.com/in/anoop-shekhar-56849418a/"
           target="_blank"
+          rel="noopener noreferrer"
           class="text-decoration-none text-primary"
           ><i class="bi bi-linkedin"></i
         ></a>
@@ -164,7 +170,7 @@
           </div>
           <div class="card p-3">
             <h5 class="mb-1">High School</h5>
-            <p class="mb-0">Kendriya vidyalaya</p>
+            <p class="mb-0">Kendriya Vidyalaya</p>
           </div>
         </div>
       </div>
@@ -180,14 +186,19 @@
           <span class="badge bg-info text-dark">Bootstrap</span>
           <span class="badge bg-warning text-dark">JavaScript</span>
           <span class="badge bg-success">React</span>
-          <span class="badge bg-dark">MySql</span>
+          <span class="badge bg-success">Spring Boot</span>
+          <span class="badge bg-info text-dark">REST APIs</span>
+          <span class="badge bg-warning text-dark">JPA / Hibernate</span>
+          <span class="badge bg-dark">MySQL</span>
+          <span class="badge bg-secondary">Git & GitHub</span>
+          <span class="badge bg-primary">Session Authentication</span>
           <span class="badge bg-danger">Java</span>
         </div>
       </div>
     </section>
 
     <!-- Projects -->
-    <section class="container mb-5 fade-in" style="animation-delay: 0.6s">
+    <section id="projects" class="container mb-5 fade-in" style="animation-delay: 0.6s">
       <h2 class="section-title">Projects</h2>
       <div class="row g-4">
         <div class="col-md-4">
@@ -195,21 +206,15 @@
             <div class="card-body">
               <h5 class="card-title">Jimmy's Castle</h5>
               <p class="card-text">
-                Jimmy’s Castle is a responsive web application that showcases an
-                e-commerce style pet supplies store where users can explore
-                products designed to meet their pets’ needs, such as items for
-                dogs, cats, and birds. The site features a clean layout with
-                navigation for browsing categories, and includes user
-                authentication pages like Login and Register to set up a more
-                interactive user experience. The project demonstrates skills in
-                building a user-friendly front end, implementing modern UI
-                elements, and deploying a static site using Github’s hosting
-                platform. It reflects a practical application of web development
-                concepts such as layout design, routing, forms, and category
-                filtering
+                Built a responsive e-commerce style pet-supplies storefront with
+                category-based discovery, modular UI sections, and intuitive navigation.
+                Improved usability through structured layouts, reusable components, and fast client-side interactions.
               </p>
+              <p class="small text-muted fw-bold">Tech Stack: HTML • CSS • JavaScript • Bootstrap • GitHub Pages</p>
               <a
                 href="https://anoops10.github.io/jimmycastle/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="btn btn-primary btn-sm"
                 >View Project</a
               >
@@ -222,24 +227,24 @@
             <div class="card-body">
               <h5 class="card-title">Kitchen's Delight</h5>
               <p class="card-text">
-                Kitchen’s Delight – Food Ordering Web App Kitchen’s Delight is a
-                responsive front-end food ordering web application inspired by
-                an Indian restaurant experience. The app allows users to browse
-                vegetarian and non-vegetarian dishes, view prices, and add items
-                to a cart with a dynamic cart counter.
+                Developed a responsive food ordering interface with modular components
+                for category discovery, pricing visibility, and real-time cart updates.
+                Emphasized clean UX flows and scalable front-end structure for easy feature expansion.
               </p>
               
               <ul class="list-unstyled small mt-3">
-                <li class="mb-1">🔹 Category-based filtering (Veg / Non-Veg)</li>
-                <li class="mb-1">🔹 Dynamic food listing rendered using JavaScript</li>
-                <li class="mb-1">🔹 Add-to-cart functionality with live cart badge update</li>
-                <li class="mb-1">🔹 Smooth scroll navigation & Clean UI</li>
+                <li class="mb-1">Category-based filtering (Veg / Non-Veg)</li>
+                <li class="mb-1">Dynamic food listing rendered with JavaScript</li>
+                <li class="mb-1">Add-to-cart functionality with live cart counter</li>
+                <li class="mb-1">Smooth section navigation with clean visual hierarchy</li>
               </ul>
               <p class="small text-muted fw-bold">
-                Tech Stack: HTML • CSS • JavaScript • GITHUB
+                Tech Stack: HTML • CSS • JavaScript • GitHub Pages
               </p>
               <a
                 href="https://anoops10.github.io/kitchensdelight/"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="btn btn-primary btn-sm"
                 >View Project</a
               >
@@ -250,22 +255,60 @@
         <div class="col-md-4">
           <div class="card h-100">
             <div class="card-body">
-              <h5 class="card-title">Groot's Fitness Club(currently working)</h5>
-              <div class="card-text small">
+              <h5 class="card-title">Groots Fitness Club</h5>
+              <p class="card-text">
+                Engineered a full-stack gym management platform to centralize onboarding,
+                trainer assignment, membership lifecycle tracking, and payment operations.
+                Architected and deployed separate frontend/backend services for scalable production usage.
+              </p>
+              <div class="card-text small mb-3">
                 <ul class="ps-3">
                   <li class="mb-2">
-                    <strong>Frontend:</strong> Built a responsive single-page application (SPA) using React, implementing React Router for persistent layouts and state management hooks (useState, useEffect) for dynamic data rendering. Integrated specialized UI components to optimize the user registration flow.
+                    <strong>Frontend:</strong> React SPA with route-based navigation, modular components, and role-aware dashboards.
                   </li>
                   <li class="mb-2">
-                    <strong>Backend:</strong> Developed a robust REST API with Spring Boot to manage core gym operations.
+                    <strong>Backend:</strong> Spring Boot RESTful APIs for user management, trainer/member operations, memberships, and payments.
                   </li>
                   <li class="mb-2">
-                    <strong>Data:</strong> Engineered complex, bidirectional entity relationships (Users, Trainers, Memberships, Payments) using JPA, ensuring clean API responses via optimized JSON serialization techniques.
+                    <strong>Data:</strong> JPA-powered relational models for Users, Trainers, Memberships, and Payments with clean serialization for API responses.
                   </li>
                   <li class="mb-2">
-                    <strong>Security:</strong> Implementing stateless user authentication and route protection using JWT (JSON Web Tokens).
+                    <strong>Security:</strong> HttpSession-based authentication with protected route access and role-based control.
                   </li>
                 </ul>
+              </div>
+              <p class="small text-muted fw-bold mb-3">
+                Tech Stack: React • Bootstrap • Spring Boot • MySQL • HttpSession • Render • Vercel
+              </p>
+              <div class="d-flex flex-wrap gap-2">
+                <a
+                  href="https://gfc-frontend-mu.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary btn-sm"
+                  >Live Frontend</a
+                >
+                <a
+                  href="https://gfc-backend-vywm.onrender.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-outline-primary btn-sm"
+                  >Live Backend</a
+                >
+                <a
+                  href="https://github.com/anoops10/gfc-frontend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-outline-dark btn-sm"
+                  >Frontend Code</a
+                >
+                <a
+                  href="https://github.com/anoops10/gfc-backend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-outline-dark btn-sm"
+                  >Backend Code</a
+                >
               </div>
             </div>
           </div>
@@ -352,7 +395,7 @@
 
     <!-- Footer -->
     <footer class="bg-white text-center py-4 mt-5 border-top">
-      <p class="mb-0 text-muted small">&copy; 2024 Anoop Shekhar. All rights reserved.</p>
+      <p class="mb-0 text-muted small">&copy; 2026 Anoop Shekhar. All rights reserved.</p>
     </footer>
 
     <script>
@@ -362,9 +405,9 @@
       });
 
       // Contact form validation and success message
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", function (e) {
+      const contactForm = document.getElementById("contactForm");
+      if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
           let valid = true;
           const name = document.getElementById("name");
           const email = document.getElementById("email");
@@ -394,10 +437,11 @@
           } else {
             // Show success message after submission (for demo, remove if using Formspree)
             e.preventDefault();
-            document.getElementById("contactForm").classList.add("d-none");
+            contactForm.classList.add("d-none");
             document.getElementById("formSuccess").classList.remove("d-none");
           }
         });
+      }
     </script>
   </body>
 </html>
