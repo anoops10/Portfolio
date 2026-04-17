@@ -1,337 +1,311 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Anoop Shekhar | Portfolio</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: 'Poppins', sans-serif;
-        background: #f8fafc;
-        min-height: 100vh;
-      }
-      .profile-img {
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
-        object-position: top;
-        border-radius: 50%;
-        border: 5px solid #3b82f6;
-        box-shadow: 0 4px 24px rgba(59, 130, 246, 0.15);
-        transition: transform 0.3s;
-      }
-      .profile-img:hover {
-        transform: scale(1.07) rotate(-2deg);
-        box-shadow: 0 8px 32px rgba(59, 130, 246, 0.25);
-      }
-      .section-title {
-        font-weight: 700;
-        color: #3b82f6;
-        letter-spacing: 1px;
-        margin-bottom: 1rem;
-        position: relative;
-        display: inline-block;
-        animation: fadeInDown 1s;
-      }
-      @keyframes fadeInDown {
-        from {
-          opacity: 0;
-          transform: translateY(-30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      .card {
-        border: none;
-        border-radius: 18px;
-        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
-        background: #f8fafc;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-      }
 
-      .form-control:focus {
-        border-color: #3b82f6;
-        box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.15);
-      }
-      .btn-primary,
-      .btn-primary:active,
-      .btn-primary:focus,
-      .btn-primary:visited {
-        background: #2563eb !important;
-        border: none !important;
-        color: #fff !important;
-        font-weight: 600;
-        transition: background 0.3s ease;
-      }
-      /* Remove button hover effect */
-      /* .btn-primary:hover { ... } */
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anoop Shekhar | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-      .btn-primary:hover,
-      .btn-primary:active {
-        background: #1d4ed8 !important;
-        color: #fff !important;
-      }
-      .fade-in {
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8fafc;
+      min-height: 100vh;
+    }
+
+    .profile-img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 50%;
+      border: 5px solid #3b82f6;
+      box-shadow: 0 4px 24px rgba(59, 130, 246, 0.15);
+      transition: transform 0.3s;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.07) rotate(-2deg);
+      box-shadow: 0 8px 32px rgba(59, 130, 246, 0.25);
+    }
+
+    .section-title {
+      font-weight: 700;
+      color: #3b82f6;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+      animation: fadeInDown 1s;
+    }
+
+    @keyframes fadeInDown {
+      from {
         opacity: 0;
-        animation: fadeIn 1.2s forwards;
+        transform: translateY(-30px);
       }
-      @keyframes fadeIn {
-        to {
-          opacity: 1;
-        }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
-      .badge {
-        padding: 0.6em 1em;
-        border-radius: 50rem;
-        font-weight: 500;
+    }
+
+    .card {
+      border: none;
+      border-radius: 18px;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+      background: #f8fafc;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .form-control:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.15);
+    }
+
+    .btn-primary,
+    .btn-primary:active,
+    .btn-primary:focus,
+    .btn-primary:visited {
+      background: #2563eb !important;
+      border: none !important;
+      color: #fff !important;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    /* Remove button hover effect */
+    /* .btn-primary:hover { ... } */
+
+    .btn-primary:hover,
+    .btn-primary:active {
+      background: #1d4ed8 !important;
+      color: #fff !important;
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.2s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
       }
-    </style>
-  </head>
-  <body>
-    <!-- Header -->
-    <header
-      class="container py-5 text-center fade-in"
-      style="animation-delay: 0.2s"
-    >
-      <!-- <img 
+    }
+
+    .badge {
+      padding: 0.6em 1em;
+      border-radius: 50rem;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="container py-5 text-center fade-in" style="animation-delay: 0.2s">
+    <!-- <img 
         src="https://ui-avatars.com/api/?name=Anoop+Shekhar&background=3b82f6&color=fff&size=250" 
         alt="Anoop Shekhar" 
         class="profile-img mb-4"
       > -->
-      <h1 class="fw-bold">Anoop Shekhar</h1>
-      <p class="lead">
-        Full-Stack Web Developer | React, Spring Boot, REST APIs | Navi Mumbai, India
-      </p>
-      <div class="d-flex justify-content-center gap-2 mb-3">
-        <a href="#projects" class="btn btn-primary btn-sm px-3">View Projects</a>
-        <a href="mailto:anoopshekhar85@gmail.com" class="btn btn-outline-primary btn-sm px-3">Email Me</a>
-      </div>
-      <div>
-        <a
-          href="https://github.com/anoops10"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="me-3 text-decoration-none text-dark"
-          ><i class="bi bi-github"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/anoop-shekhar-56849418a/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-decoration-none text-primary"
-          ><i class="bi bi-linkedin"></i
-        ></a>
-      </div>
-    </header>
+    <h1 class="fw-bold">Anoop Shekhar</h1>
+    <p class="lead">
+      Full-Stack Web Developer | React, Spring Boot, REST APIs | Navi Mumbai, India
+    </p>
+    <div class="d-flex justify-content-center gap-2 mb-3">
+      <a href="#projects" class="btn btn-primary btn-sm px-3">View Projects</a>
+      <a href="mailto:anoopshekhar85@gmail.com" class="btn btn-outline-primary btn-sm px-3">Email Me</a>
+    </div>
+    <div>
+      <a href="https://github.com/anoops10" target="_blank" rel="noopener noreferrer"
+        class="me-3 text-decoration-none text-dark"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/anoop-shekhar-56849418a/" target="_blank" rel="noopener noreferrer"
+        class="text-decoration-none text-primary"><i class="bi bi-linkedin"></i></a>
+    </div>
+  </header>
 
-    <!-- Personal Details & Education -->
-    <section class="container mb-5 fade-in" style="animation-delay: 0.4s">
-      <div class="row g-4">
-        <div class="col-md-6">
-          <h2 class="section-title">Personal Details</h2>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              Full Name: <strong>Anoop Shekhar</strong>
-            </li>
-            <!-- <li class="list-group-item">DOB: <strong>01 Jan 2000</strong></li> -->
-            <li class="list-group-item">
-              Email: <strong>anoopshekhar85@gmail.com</strong>
-            </li>
-            <li class="list-group-item">Phone: <strong>7066049903</strong></li>
-            <li class="list-group-item">
-              Location: <strong>Navi Mumbai, India</strong>
-            </li>
-          </ul>
+  <!-- Personal Details & Education -->
+  <section class="container mb-5 fade-in" style="animation-delay: 0.4s">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <h2 class="section-title">Personal Details</h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            Full Name: <strong>Anoop Shekhar</strong>
+          </li>
+          <!-- <li class="list-group-item">DOB: <strong>01 Jan 2000</strong></li> -->
+          <li class="list-group-item">
+            Email: <strong>anoopshekhar85@gmail.com</strong>
+          </li>
+          <li class="list-group-item">Phone: <strong>7066049903</strong></li>
+          <li class="list-group-item">
+            Location: <strong>Navi Mumbai, India</strong>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h2 class="section-title">Education</h2>
+        <div class="card p-3 mb-3">
+          <h5 class="mb-1">Bachelor of Engineering in Computer Science</h5>
+          <p class="mb-0 text-muted">Shivaji University</p>
         </div>
-        <div class="col-md-6">
-          <h2 class="section-title">Education</h2>
-          <div class="card p-3 mb-3">
-            <h5 class="mb-1">Bachelor of Engineering in Computer Science</h5>
-            <p class="mb-0 text-muted">Shivaji University</p>
-          </div>
-          <div class="card p-3">
-            <h5 class="mb-1">High School</h5>
-            <p class="mb-0">Kendriya Vidyalaya</p>
-          </div>
+        <div class="card p-3">
+          <h5 class="mb-1">High School</h5>
+          <p class="mb-0">Kendriya Vidyalaya</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Technical Skills -->
-    <section class="container mb-5 fade-in" style="animation-delay: 0.6s">
-      <h2 class="section-title">Technical Skills</h2>
-      <div class="card p-3 mb-3">
-        <div class="d-flex flex-wrap gap-2 align-items-center">
-          <span class="badge bg-primary">HTML</span>
-          <span class="badge bg-secondary">CSS</span>
-          <span class="badge bg-info text-dark">Bootstrap</span>
-          <span class="badge bg-warning text-dark">JavaScript</span>
-          <span class="badge bg-success">React</span>
-          <span class="badge bg-success">Spring Boot</span>
-          <span class="badge bg-info text-dark">REST APIs</span>
-          <span class="badge bg-warning text-dark">JPA / Hibernate</span>
-          <span class="badge bg-dark">MySQL</span>
-          <span class="badge bg-secondary">Git & GitHub</span>
-          <span class="badge bg-primary">Session Authentication</span>
-          <span class="badge bg-danger">Java</span>
-        </div>
+  <!-- Technical Skills -->
+  <section class="container mb-5 fade-in" style="animation-delay: 0.6s">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="card p-3 mb-3">
+      <div class="d-flex flex-wrap gap-2 align-items-center">
+        <span class="badge bg-primary">HTML</span>
+        <span class="badge bg-secondary">CSS</span>
+        <span class="badge bg-info text-dark">Bootstrap</span>
+        <span class="badge bg-warning text-dark">JavaScript</span>
+        <span class="badge bg-success">React</span>
+        <span class="badge bg-success">Spring Boot</span>
+        <span class="badge bg-info text-dark">REST APIs</span>
+        <span class="badge bg-warning text-dark">JPA / Hibernate</span>
+        <span class="badge bg-dark">MySQL</span>
+        <span class="badge bg-secondary">Git & GitHub</span>
+        <span class="badge bg-primary">Session Authentication</span>
+        <span class="badge bg-danger">Java</span>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Projects -->
-    <section id="projects" class="container mb-5 fade-in" style="animation-delay: 0.6s">
-      <h2 class="section-title">Projects</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Jimmy's Castle</h5>
-              <p class="card-text">
-                Built a responsive e-commerce style pet-supplies storefront with
-                category-based discovery, modular UI sections, and intuitive navigation.
-                Improved usability through structured layouts, reusable components, and fast client-side interactions.
-              </p>
-              <p class="small text-muted fw-bold">Tech Stack: HTML • CSS • JavaScript • Bootstrap • GitHub Pages</p>
-              <a
-                href="https://anoops10.github.io/jimmycastle/index.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-primary btn-sm"
-                >View Project</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Kitchen's Delight</h5>
-              <p class="card-text">
-                Developed a responsive food ordering interface with modular components
-                for category discovery, pricing visibility, and real-time cart updates.
-                Emphasized clean UX flows and scalable front-end structure for easy feature expansion.
-              </p>
-              
-              <ul class="list-unstyled small mt-3">
-                <li class="mb-1">Category-based filtering (Veg / Non-Veg)</li>
-                <li class="mb-1">Dynamic food listing rendered with JavaScript</li>
-                <li class="mb-1">Add-to-cart functionality with live cart counter</li>
-                <li class="mb-1">Smooth section navigation with clean visual hierarchy</li>
-              </ul>
-              <p class="small text-muted fw-bold">
-                Tech Stack: HTML • CSS • JavaScript • GitHub Pages
-              </p>
-              <a
-                href="https://anoops10.github.io/kitchensdelight/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-primary btn-sm"
-                >View Project</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Groots Fitness Club</h5>
-              <p class="card-text">
-                Engineered a full-stack gym management platform to centralize onboarding,
-                trainer assignment, membership lifecycle tracking, and payment operations.
-                Architected and deployed separate frontend/backend services for scalable production usage.
-              </p>
-              <div class="card-text small mb-3">
-                <ul class="ps-3">
-                  <li class="mb-2">
-                    <strong>Frontend:</strong> React SPA with route-based navigation, modular components, and role-aware dashboards.
-                  </li>
-                  <li class="mb-2">
-                    <strong>Backend:</strong> Spring Boot RESTful APIs for user management, trainer/member operations, memberships, and payments.
-                  </li>
-                  <li class="mb-2">
-                    <strong>Data:</strong> JPA-powered relational models for Users, Trainers, Memberships, and Payments with clean serialization for API responses.
-                  </li>
-                  <li class="mb-2">
-                    <strong>Security:</strong> HttpSession-based authentication with protected route access and role-based control.
-                  </li>
-                </ul>
-              </div>
-              <p class="small text-muted fw-bold mb-3">
-                Tech Stack: React • Bootstrap • Spring Boot • MySQL • HttpSession • Render • Vercel
-              </p>
-              <div class="d-flex flex-wrap gap-2">
-                <a
-                  href="https://gfc-frontend-mu.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn btn-primary btn-sm"
-                  >Live Frontend</a
-                >
-                <a
-                  href="https://gfc-backend-vywm.onrender.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn btn-outline-primary btn-sm"
-                  >Live Backend</a
-                >
-                <a
-                  href="https://github.com/anoops10/gfc-frontend"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn btn-outline-dark btn-sm"
-                  >Frontend Code</a
-                >
-                <a
-                  href="https://github.com/anoops10/gfc-backend"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn btn-outline-dark btn-sm"
-                  >Backend Code</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-            <div class="col-md-4">
+  <!-- Projects -->
+  <section id="projects" class="container mb-5 fade-in" style="animation-delay: 0.6s">
+    <h2 class="section-title">Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
         <div class="card h-100">
           <div class="card-body">
-            <h5 class="card-title">Expense Tracker</h5>
+            <h5 class="card-title">Jimmy's Castle</h5>
             <p class="card-text">
-              Developed a full-stack expense management application with real-time tracking, category-based organization, and visual analytics. Features intuitive UI for quick expense logging with comprehensive reporting and data persistence.
+              Built a responsive e-commerce style pet-supplies storefront with
+              category-based discovery, modular UI sections, and intuitive navigation.
+              Improved usability through structured layouts, reusable components, and fast client-side interactions.
+            </p>
+            <p class="small text-muted fw-bold">Tech Stack: HTML • CSS • JavaScript • Bootstrap • GitHub Pages</p>
+            <a href="https://anoops10.github.io/jimmycastle/index.html" target="_blank" rel="noopener noreferrer"
+              class="btn btn-primary btn-sm">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Kitchen's Delight</h5>
+            <p class="card-text">
+              Developed a responsive food ordering interface with modular components
+              for category discovery, pricing visibility, and real-time cart updates.
+              Emphasized clean UX flows and scalable front-end structure for easy feature expansion.
+            </p>
+            <div class="card-text small mb-3">
+              <ul class="ps-3">
+                <li class="mb-2">Category-based filtering (Veg / Non-Veg)</li>
+                <li class="mb-2">Dynamic food listing rendered with JavaScript</li>
+                <li class="mb-2">Add-to-cart functionality with live cart counter</li>
+                <li class="mb-2">Smooth section navigation with clean visual hierarchy</li>
+              </ul>
+            </div>
+            <p class="small text-muted fw-bold">
+              Tech Stack: HTML • CSS • JavaScript • GitHub Pages
+            </p>
+            <a href="https://anoops10.github.io/kitchensdelight/" target="_blank" rel="noopener noreferrer"
+              class="btn btn-primary btn-sm">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Groots Fitness Club</h5>
+            <p class="card-text">
+              Engineered a full-stack gym management platform to centralize onboarding,
+              trainer assignment, membership lifecycle tracking, and payment operations.
+              Architected and deployed separate frontend/backend services for scalable production usage.
             </p>
             <div class="card-text small mb-3">
               <ul class="ps-3">
                 <li class="mb-2">
-                  <strong>Frontend:</strong> React with dynamic form handling, real-time updates, and responsive charts for expense visualization.
+                  <strong>Frontend:</strong> React SPA with route-based navigation, modular components, and role-aware
+                  dashboards.
                 </li>
                 <li class="mb-2">
-                  <strong>Backend:</strong> Spring Boot RESTful APIs for expense CRUD operations, category management, and analytics calculations.
+                  <strong>Backend:</strong> Spring Boot RESTful APIs for user management, trainer/member operations,
+                  memberships, and payments.
                 </li>
                 <li class="mb-2">
-                  <strong>Data:</strong> MySQL database with optimized queries for expense aggregation and user-specific data isolation.
+                  <strong>Data:</strong> JPA-powered relational models for Users, Trainers, Memberships, and Payments
+                  with clean serialization for API responses.
+                </li>
+                <li class="mb-2">
+                  <strong>Security:</strong> HttpSession-based authentication with protected route access and role-based
+                  control.
+                </li>
+              </ul>
+            </div>
+            <p class="small text-muted fw-bold mb-3">
+              Tech Stack: React • Bootstrap • Spring Boot • MySQL • HttpSession • Render • Vercel
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="https://gfc-frontend-mu.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">Live Frontend</a>
+              <a href="https://gfc-backend-vywm.onrender.com" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-primary btn-sm">Live Backend</a>
+              <a href="https://github.com/anoops10/gfc-frontend" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-dark btn-sm">Frontend Code</a>
+              <a href="https://github.com/anoops10/gfc-backend" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-dark btn-sm">Backend Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Expense Tracker</h5>
+            <p class="card-text">
+              Developed a backend-centric Expense Tracker system that enables users to register, authenticate, and manage
+              their expenses through REST APIs built with Spring Boot. Implemented a structured architecture using
+              controllers, service classes, repositories, DTOs, and JPA entities to ensure separation of concerns and
+              maintainability. The application includes session-based authentication, CRUD operations for expenses, custom
+              database queries, and proper exception handling, with a lightweight frontend used only for API consumption
+              and demonstration.
+            </p>
+            <div class="card-text small mb-3">
+              <ul class="ps-3">
+                <li class="mb-2">
+                  <strong>Backend:</strong> Spring Boot RESTful APIs for expense CRUD operations, category management, and
+                  analytics calculations.
+                </li>
+                <li class="mb-2">
+                  <strong>Data:</strong> MySQL database with optimized queries for expense aggregation and user-specific
+                  data isolation.
                 </li>
               </ul>
             </div>
@@ -339,74 +313,65 @@
               Tech Stack: React • Spring Boot • MySQL • REST APIs
             </p>
             <div class="d-flex flex-wrap gap-2">
-              <a
-                href="https://github.com/anoops10/ExpenseTrackerFE"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-outline-dark btn-sm"
-                >Frontend Code</a
-            >
-              <a
-                href="https://github.com/anoops10/ExpenseTrackerBE"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-outline-dark btn-sm"
-                >Backend Code</a
-            >
+              <a href="https://github.com/anoops10/ExpenseTrackerFE" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-dark btn-sm">Frontend Code</a>
+              <a href="https://github.com/anoops10/ExpenseTrackerBE" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-dark btn-sm">Backend Code</a>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-    </section>
+  </section>
 
-    <!-- Certification Section
+  <!-- Certification Section
   <section class="container mb-5 fade-in" style="animation-delay:0.7s;">
     <h2 class="section-title">Certifications</h2>
     
   </section> -->
 
-    <!-- Hobbies -->
-    <section class="container mb-5 fade-in" style="animation-delay: 0.8s">
-      <h2 class="section-title">Hobbies</h2>
-      <div class="row g-4">
-        <div class="col-md-3 col-6">
-          <div class="card text-center py-4">
-            <i class="bi bi-signpost-2 fs-1 text-primary"></i>
-            <div class="card-body">
-              <h6 class="card-title">Trekking</h6>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-6">
-          <div class="card text-center py-4">
-            <i class="bi bi-dribbble fs-1 text-success"></i>
-            <div class="card-body">
-              <h6 class="card-title">Football</h6>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-6">
-          <div class="card text-center py-4">
-            <i class="bi bi-camera fs-1 text-warning"></i>
-            <div class="card-body">
-              <h6 class="card-title">Photography</h6>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-6">
-          <div class="card text-center py-4">
-            <i class="bi bi-car-front fs-1 text-danger"></i>
-            <div class="card-body">
-              <h6 class="card-title">Road Trips</h6>
-            </div>
+  <!-- Hobbies -->
+  <section class="container mb-5 fade-in" style="animation-delay: 0.8s">
+    <h2 class="section-title">Hobbies</h2>
+    <div class="row g-4">
+      <div class="col-md-3 col-6">
+        <div class="card text-center py-4">
+          <i class="bi bi-signpost-2 fs-1 text-primary"></i>
+          <div class="card-body">
+            <h6 class="card-title">Trekking</h6>
           </div>
         </div>
       </div>
-    </section>
+      <div class="col-md-3 col-6">
+        <div class="card text-center py-4">
+          <i class="bi bi-dribbble fs-1 text-success"></i>
+          <div class="card-body">
+            <h6 class="card-title">Football</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="card text-center py-4">
+          <i class="bi bi-camera fs-1 text-warning"></i>
+          <div class="card-body">
+            <h6 class="card-title">Photography</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="card text-center py-4">
+          <i class="bi bi-car-front fs-1 text-danger"></i>
+          <div class="card-body">
+            <h6 class="card-title">Road Trips</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <!-- <section class="container mb-5 fade-in" style="animation-delay: 1.0s">
+  <!-- Contact Section -->
+  <!-- <section class="container mb-5 fade-in" style="animation-delay: 1.0s">
       <h2 class="section-title">Get In Touch</h2>
       <div class="row justify-content-center">
         <div class="col-md-8">
@@ -437,55 +402,56 @@
       </div>
     </section> -->
 
-    <!-- Footer -->
-    <footer class="bg-white text-center py-4 mt-5 border-top">
-      <p class="mb-0 text-muted small">&copy; 2026 Anoop Shekhar. All rights reserved.</p>
-    </footer>
+  <!-- Footer -->
+  <footer class="bg-white text-center py-4 mt-5 border-top">
+    <p class="mb-0 text-muted small">&copy; 2026 Anoop Shekhar. All rights reserved.</p>
+  </footer>
 
-    <script>
-      // Animate fade-in sections
-      document.querySelectorAll(".fade-in").forEach((el, i) => {
-        el.style.animationDelay = 0.2 + i * 0.2 + "s";
+  <script>
+    // Animate fade-in sections
+    document.querySelectorAll(".fade-in").forEach((el, i) => {
+      el.style.animationDelay = 0.2 + i * 0.2 + "s";
+    });
+
+    // Contact form validation and success message
+    const contactForm = document.getElementById("contactForm");
+    if (contactForm) {
+      contactForm.addEventListener("submit", function (e) {
+        let valid = true;
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const message = document.getElementById("message");
+        const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+        if (!name.value.trim()) {
+          name.classList.add("is-invalid");
+          valid = false;
+        } else {
+          name.classList.remove("is-invalid");
+        }
+        if (!email.value.trim() || !emailPattern.test(email.value)) {
+          email.classList.add("is-invalid");
+          valid = false;
+        } else {
+          email.classList.remove("is-invalid");
+        }
+        if (!message.value.trim()) {
+          message.classList.add("is-invalid");
+          valid = false;
+        } else {
+          message.classList.remove("is-invalid");
+        }
+        if (!valid) {
+          e.preventDefault();
+        } else {
+          // Show success message after submission (for demo, remove if using Formspree)
+          e.preventDefault();
+          contactForm.classList.add("d-none");
+          document.getElementById("formSuccess").classList.remove("d-none");
+        }
       });
+    }
+  </script>
+</body>
 
-      // Contact form validation and success message
-      const contactForm = document.getElementById("contactForm");
-      if (contactForm) {
-        contactForm.addEventListener("submit", function (e) {
-          let valid = true;
-          const name = document.getElementById("name");
-          const email = document.getElementById("email");
-          const message = document.getElementById("message");
-          const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
-
-          if (!name.value.trim()) {
-            name.classList.add("is-invalid");
-            valid = false;
-          } else {
-            name.classList.remove("is-invalid");
-          }
-          if (!email.value.trim() || !emailPattern.test(email.value)) {
-            email.classList.add("is-invalid");
-            valid = false;
-          } else {
-            email.classList.remove("is-invalid");
-          }
-          if (!message.value.trim()) {
-            message.classList.add("is-invalid");
-            valid = false;
-          } else {
-            message.classList.remove("is-invalid");
-          }
-          if (!valid) {
-            e.preventDefault();
-          } else {
-            // Show success message after submission (for demo, remove if using Formspree)
-            e.preventDefault();
-            contactForm.classList.add("d-none");
-            document.getElementById("formSuccess").classList.remove("d-none");
-          }
-        });
-      }
-    </script>
-  </body>
 </html>
